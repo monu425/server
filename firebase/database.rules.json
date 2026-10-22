@@ -1,0 +1,18 @@
+{
+  "rules": {
+    "presence": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        "devices": {
+          "$deviceId": {
+            ".write": false
+          }
+        }
+      }
+    },
+    "fcmTokens": {
+      ".read": false,
+      ".write": false
+    }
+  }
+}
